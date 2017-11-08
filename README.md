@@ -6,6 +6,13 @@ This repository contains the example code used in the article "Writing effective
 
 This example repository comes with a set of slides for use in presentations. See the `.presentation` directory for more info.
 
+`reveal-md` is used to display the slides:
+
+## Global Installation
+```
+npm install -g reveal-md
+```
+
 ## Local Installation
 ```
 yarn install
