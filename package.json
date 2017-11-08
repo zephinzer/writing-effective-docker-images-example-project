@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "slideshow": "reveal-md --css ./.presentation/style.css -w ./.presentation/slides.md"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "next": "^4.1.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "reveal-md": "^0.5.0"
   }
 }
