@@ -7,7 +7,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "slideshow": "reveal-md --css ./.presentation/style.css -w ./.presentation/slides.md"
+    "slideshow": "reveal-md --css ./.slides/style.css -w ./.slides/slides.md"
   },
   "author": "",
   "license": "ISC",

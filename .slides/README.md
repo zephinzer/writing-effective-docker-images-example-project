@@ -23,7 +23,7 @@ npm run slideshow
 Or call it yourself using `reveal-md`:
 
 ```
-reveal-md --css ./.presentation/style.css -w ./.presentation/slides.md
+reveal-md --css ./.slides/style.css -w ./.slides/slides.md
 ```
 
 # Licensing Matters

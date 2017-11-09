@@ -4,7 +4,7 @@ This repository contains the example code used in the article "Writing effective
 
 # Slides
 
-This example repository comes with a set of slides for use in presentations. See the `.presentation` directory for more info.
+This example repository comes with a set of slides for use in presentations. See the `.slides` directory for more info.
 
 `reveal-md` is used to display the slides:
 
@@ -29,7 +29,7 @@ npm run slideshow
 Or call it yourself using `reveal-md`:
 
 ```
-reveal-md --css ./.presentation/style.css -w ./.presentation/slides.md
+reveal-md --css ./.slides/style.css -w ./.slides/slides.md
 ```
 
 ## Licensing

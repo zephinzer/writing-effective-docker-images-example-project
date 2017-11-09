@@ -161,7 +161,7 @@ revealOptions:
 
 - a "*step*" in the Docker Build process
 - cached as an image that builds upon a previous image
-- layers are stacked upon each other incrementally to build into the finall...
+- layers are stacked upon each other incrementally to build into the final...
 
 <!--v-->
 
@@ -176,7 +176,7 @@ revealOptions:
 ### Container
 
 - an instantiated image
-- behaves like a gust virtual machine running on your host machine
+- behaves like a virtual machine running on your host machine
 - shares only the kernel with the base operating system
 - based on the Linux kernel (on OS X and Windows, a Linux VM is being run in the background to provide this kernel)
 
@@ -406,6 +406,37 @@ docker run \
 ```
 > note the `dev`, it is appended to the `ENTRYPOINT` specified in the Dockerfile
 
+<!--v-->
+
+## Crafting the Image
+
+- - -
+
+
+#### Choose an Image
+
+
+#### Import the Image
+
+
+#### Specify Environment Variables
+
+
+#### Install System Dependencies
+
+
+#### Import Code/Configurations
+
+
+#### Install Application Dependencies
+
+
+#### Setup I/O Channels
+
+
+#### Execute your Image
+
+- - -
 
 <!--s-->
 
@@ -474,6 +505,8 @@ docker run \
   RUN apk upgrade
   ENV APK_ADD="bash curl nodejs nodejs-npm yarn"
   ENV APK_DEL="bash curl yarn"
+* ENV USERNAME="app"
+* ENV USER_ID="1000"
   RUN apk add --no-cache ${APK_ADD}i
   WORKDIR /app
   COPY . /app
@@ -516,6 +549,8 @@ docker run \
   RUN apk upgrade
   ENV APK_ADD="bash curl nodejs nodejs-npm yarn"
   ENV APK_DEL="bash curl yarn"
+  ENV USERNAME="app"
+  ENV USER_ID="1000"
   RUN apk add --no-cache ${APK_ADD}i
   WORKDIR /app
   COPY . /app
@@ -585,6 +620,8 @@ docker run \
 * ARG APPLICATION_PATH=/app
   ENV APK_ADD="bash curl nodejs nodejs-npm yarn"
   ENV APK_DEL="bash curl yarn"
+  ENV USERNAME="app"
+  ENV USER_ID="1000"
   ENV USERNAME="app"
   ENV USER_ID="1000"
   RUN apk add --no-cache ${APK_ADD}
@@ -707,6 +744,24 @@ docker run \
   ENTRYPOINT ["npm", "run", "dev"]
 ```
 
+<!--v-->
+
+## Enhancements & Optimisations
+
+- - -
+
+#### Remove Useless Binaries & Artefacts
+
+#### Secure Permissions
+
+#### Remove Useless Users
+
+#### Add Build-Time Configurations
+
+#### Collapse Directives
+
+- - -
+
 <!--s-->
 
 <!-- .slide: data-background="https://cdn.stocksnap.io/img-thumbs/960w/RIG6ID482D.jpg" -->
@@ -720,6 +775,8 @@ docker run \
 - do this via the `LABEL` directive
 
 <!--v-->
+
+### It was Me!
 
 ```
 ...
@@ -762,6 +819,20 @@ docker run \
 ##### To `tar.gz`
 
 `docker save -o image-tarball.tar.gz my_image`
+
+<!--v-->
+
+## Image Distribution
+
+- - -
+
+#### Specify Metadata
+
+#### Image Licensing
+
+#### Publishing The Image
+
+- - -
 
 <!--s-->
 
